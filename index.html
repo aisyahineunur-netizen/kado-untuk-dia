@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=0.1">
+        <title>KADO UNTUK DIA</title>
+        <link href="https://jsdelivr.net" rel="stylesheet">
+        <style>
+            body {
+                background-color: linear-gradient(135deg, #ffe5ec 0%, #ffc2d1 100);
+                font-family:'Poppins', 'Sagoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 20px;
+                margin: 0;
+            }
+            .card {
+                background-color: rgba(255, 255, 255, 0.9);
+                border-radius: 15px;
+                box-shadow: 0 10px 25px rgba(228, 78, 117, 0.15);
+                padding: 30px;
+                border: 1px solid #ffc2d1;
+                max-width: 600px;
+                margin: 20px auto;
+            }
+            .btn-danger {
+                background-color: #ff4b4b;
+                border: none;
+            }
+            btn-danger:hover {
+                background-color: #ff3333;
+            }
+            pre {
+                background: #212529;
+                color: #f8f9fa;
+                padding: 15px;
+                border-radius: 10px;
+                font-size: 12px;
+                text-align: left;
+                animation: denyut 1.2s infinite ease-in-out;
+            }
+            @keyframes denyut {
+                0% {transform: scale(1);}
+                50% {transform: scale(1.03);}
+                100% {transform: scale(1);}
+            }
+            </style>
+    </head>
+    <body>
+    <div class="container d-flex justify-content align-items-center min-vh-100">
+        <div class="card p-4 text-center" style="max-width: 500px; width: 100%">
+            {% if not sukses %}
+            <h3 class="text-danger fw-bold"> Security Verification</h3>
+            <p class="text-muted small">Hubungan_kita_v1.0.py</p>
+            <hr>
+            {% if error %}
+            <div class="alert alert-danger p-2 small">{{error}}</div>
+            {% endif %}
+
+            <form method="POST" action="/">
+            <div class="mb-3 text-start">
+                <label class="form-label small fw-bold">Nama Kamu:</label>
+                <input type="text" name="nama" class="form-control" placeholder="Ketik di sini..." required>
+            </div>
+            <div class="mb-3 text-start">
+                <label class="form-label small fw-bold">Tanggal berapa kita resmi jadian: (DD-MM)</label>
+                <input type="text" name="tgl_jadian" class="form-control" placeholder="Contoh: 05-09" required>
+            </div>
+            <div class="mb-3 text-start">
+                <label class="form-label small fw-bold">Apa makanan kesukaan ku kalau kita ngedate?</label>
+                <input type="text" name="makanan_fav" class="form-control" placeholder="Jawab di sini ..." required>
+            </div>
+            <button type="submit" class="btn btn-danger w-100 fw-bold">Unlock Akses Hati❤️</button>
+            </form>
+            {% else %}
+            <h3 class="text-success fw-bold">🎉 ACCESS GRANTED!</h3>
+            <p class="text-muted small">otorisasi penuh berhasil diberikan.</p>
+            <hr>
+            <pre><code>
+                ******         ******
+               **     **    **      **
+             **          **          **
+             **                       **
+             **                       **
+             **                       **
+             **                       **
+              **  I LOVE YOU SO MUCH **
+               **                   **
+                **                 **
+                 **               **
+                  **             **
+                   **           **
+                    **         **
+                     **       **
+                      **     **
+                       **   **
+                        ** **
+                         **
+            </code></pre>
+            <h4 class="mt-3 fw-bold text-danger">📜 Akses diterima ! Kontrak bucin resmi diperpanjang selamanya💕🔐</h4>
+            <p class="text-muted text-start small">
+                Kamu adalah <i>runtime environment terbaik di hidupku. Tanpa kamu, duniaku cuma penuh dengan <i>syntactical error</i> 
+                dan kekacauan. Terima kasih sudah menjadi <i>compiler</i> yang selalu sabar menghadapi <i>bug</i>sifatku.
+                Semoga hubungan kita tidak pernah ketemu <i>infinite loop</i> yang melelahka, melainkan terus bertumbuh tanpa ada <i>system crash</i>.
+            </p>
+            <p class="fw-bold">I love you the moon and back! 🥰</p>
+            <a href="https://youtu.be/Ya2fo8taav4?si=Bcx_UC5LCNr0OtjJ" target="_blank" class="btn btn-outline-danger w-100 fw-bold btn-sm mt-2">Klik untuk dengan lagu dari aku.</a>
+            {% endif %}
+        </div>
+        </div>
+    </body>
+    </html>
