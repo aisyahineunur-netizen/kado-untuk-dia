@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
 
-app = Flask(__name__, template_folder='../')
+app = Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
@@ -19,6 +19,8 @@ def home():
             pesan_error = "ACCESS DENIED! Jawaban kamu masih ada yang salah. Ingat-ingat ya 😡"
 
     return render_template('index.html', error=pesan_error, sukses=akses_diberikan)
+    
+app = app
 
 if __name__== '__main__':
     app.run(debug=True)
